@@ -1,3 +1,4 @@
+
 import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
 import { Button } from "./ui/button";
 import { CompactValue } from "./CompactValue";
@@ -53,6 +54,15 @@ export const Hero = () => {
       <p className="text-lg text-gray-600 mb-6 max-w-2xl">
         Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
+      
+      {/* Testimonial section moved above the CTA button to eliminate gap */}
+      <div className="max-w-2xl text-center mb-6">
+        <h2 className="text-3xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
+        <p className="text-lg text-purple-600 italic">
+          "Revenue Generating Moments" D2C Marketer
+        </p>
+      </div>
+      
       <Button 
         size="lg"
         className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mb-4"
@@ -78,13 +88,6 @@ export const Hero = () => {
       </div>
       
       <CompactValue />
-      
-      <div className="mt-8 mb-4 max-w-2xl text-center">
-        <h2 className="text-3xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic mb-4">
-          "Revenue Generating Moments" D2C Marketer
-        </p>
-      </div>
     </div>
   );
 };
