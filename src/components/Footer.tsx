@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-100 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-4">
             <Link to="/" className="block">
               <img 
@@ -40,22 +40,6 @@ export const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Features</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/video-remixer" className="text-gray-600 hover:text-purple-600">
-                  Video Remixer
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-hub" className="text-gray-600 hover:text-purple-600">
-                  AI Powered Video Hub
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
 
