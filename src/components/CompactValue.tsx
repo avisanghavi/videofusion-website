@@ -1,4 +1,3 @@
-
 import { MessageSquare, FileText, Mail, Video, Megaphone, Star } from "lucide-react";
 
 export const CompactValue = () => {
@@ -63,7 +62,7 @@ export const CompactValue = () => {
           ))}
         </div>
         
-        <h2 className="text-2xl font-bold mb-6 text-center">Use Video Highlights Anywhere</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Use HIGHLIGHTS for all of your Video Marketing</h2>
         <div className="grid md:grid-cols-5 gap-4 mb-8">
           {useCase.map((item, index) => (
             <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
