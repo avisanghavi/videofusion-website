@@ -1,5 +1,5 @@
 
-import { MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
+import { MessageSquare, FileText, Mail, Video, Megaphone, Star } from "lucide-react";
 
 export const CompactValue = () => {
   const features = [
