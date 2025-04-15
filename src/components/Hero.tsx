@@ -61,17 +61,6 @@ export const Hero = () => {
         </p>
       </div>
       
-      <Button 
-        size="lg"
-        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mt-4 mb-4"
-      >
-        START WITH 10 FREE MINUTES
-        <ArrowRight className="ml-2 h-5 w-5" />
-      </Button>
-      <p className="text-sm text-gray-500 mb-8">
-        <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
-      </p>
-      
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Use HIGHLIGHTS for all of your Video Marketing</h2>
       <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-8">
         {useCase.map((item, index) => (
