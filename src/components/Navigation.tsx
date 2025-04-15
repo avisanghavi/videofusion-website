@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -7,8 +6,12 @@ export const Navigation = () => {
     <nav className="w-full bg-white border-b border-gray-100 py-4 px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link to="/" className="text-xl font-bold text-purple-600">
-            HIGHLIGHTS
+          <Link to="/" className="text-xl font-bold">
+            <img 
+              src="/lovable-uploads/ffe6ee07-3ac4-49de-b817-2f08723c42e0.png" 
+              alt="Videofusion"
+              className="h-8"
+            />
           </Link>
         </div>
         
