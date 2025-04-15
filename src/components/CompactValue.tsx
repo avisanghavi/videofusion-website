@@ -5,8 +5,8 @@ export const CompactValue = () => {
   const features = [
     {
       icon: "🎯",
-      title: "10 Free Minutes Monthly",
-      description: "Process up to 10 minutes of video content every month"
+      title: "Free Trial",
+      description: "Start with 10 minutes of video processing, no credit card needed"
     },
     {
       icon: "🤖",
@@ -15,8 +15,8 @@ export const CompactValue = () => {
     },
     {
       icon: "✨",
-      title: "Pay As You Grow",
-      description: "Need more? Only pay for what you use"
+      title: "Early Bird Pricing",
+      description: "Lock in $5 per 10 minutes (75% off regular price)"
     }
   ];
 
@@ -38,7 +38,7 @@ export const CompactValue = () => {
         <div className="mt-8 text-center">
           <h2 className="text-2xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
           <p className="text-gray-600">
-            50 exclusive spots at $4.99/month - includes 10 minutes free processing every month
+            First 50 users lock in $5 per 10 minutes of processing (Regular price: $20)
           </p>
           <div className="flex justify-center gap-2 mt-4">
             <Star className="w-5 h-5 text-yellow-500 fill-current" />

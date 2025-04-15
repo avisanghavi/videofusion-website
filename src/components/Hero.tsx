@@ -12,17 +12,17 @@ export const Hero = () => {
         Turn Your <span className="text-purple-600">Existing Videos</span> Into Revenue-Generating Assets
       </h1>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl">
-        Process up to 10 minutes of video content every month for free. No credit card required to start. Extract every dollar of performance from your UGC, Influencer Marketing, and branded videos.
+        Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
       <Button 
         size="lg"
         className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mb-4"
       >
-        START FREE - NO CREDIT CARD
+        START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
       <p className="text-sm text-gray-500">
-        <span className="font-semibold text-purple-600">50 exclusive spots</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> if spots are full
+        <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
       </p>
     </div>
   );
