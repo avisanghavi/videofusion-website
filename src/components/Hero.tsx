@@ -12,13 +12,13 @@ export const Hero = () => {
         Turn Your <span className="text-purple-600">Existing Videos</span> Into Revenue-Generating Assets
       </h1>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl">
-        Extract every dollar of performance from your UGC, Influencer Marketing, and branded videos — no editors, no guesswork, just results.
+        Process up to 10 minutes of video content every month for free. No credit card required to start. Extract every dollar of performance from your UGC, Influencer Marketing, and branded videos.
       </p>
       <Button 
         size="lg"
         className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mb-4"
       >
-        JOIN THE MARKETER'S EDGE CIRCLE
+        START FREE - NO CREDIT CARD
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
       <p className="text-sm text-gray-500">
@@ -27,4 +27,3 @@ export const Hero = () => {
     </div>
   );
 };
-
