@@ -1,4 +1,3 @@
-
 import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
 import { Button } from "./ui/button";
 import { CompactValue } from "./CompactValue";
@@ -55,9 +54,9 @@ export const Hero = () => {
         Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
       
-      <div className="max-w-2xl mb-4">
-        <h2 className="text-3xl font-bold mb-1">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic mb-2">
+      <div className="max-w-2xl">
+        <h2 className="text-3xl font-bold">This Isn't Just Clipping — It's Conversion</h2>
+        <p className="text-lg text-purple-600 italic">
           "Revenue Generating Moments" D2C Marketer
         </p>
       </div>
