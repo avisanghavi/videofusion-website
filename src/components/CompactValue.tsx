@@ -21,7 +21,7 @@ export const CompactValue = () => {
   ];
 
   return (
-    <div className="py-8 px-4 bg-white">
+    <div className="py-6 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => (

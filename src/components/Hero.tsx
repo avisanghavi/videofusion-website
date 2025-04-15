@@ -61,12 +61,12 @@ export const Hero = () => {
         START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
-      <p className="text-sm text-gray-500 mb-8">
+      <p className="text-sm text-gray-500 mb-12">
         <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
       </p>
       
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Use HIGHLIGHTS for all of your Video Marketing</h2>
-      <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-6">
+      <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-8">
         {useCase.map((item, index) => (
           <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
             <div className="flex justify-center mb-2 text-purple-600">
@@ -79,6 +79,16 @@ export const Hero = () => {
       </div>
       
       <CompactValue />
+      
+      <div className="mt-12 mb-8 max-w-2xl">
+        <h2 className="text-3xl font-bold mb-4">This Isn't Just Clipping — It's Conversion</h2>
+        <p className="text-xl text-gray-600 mb-2">
+          50 exclusive spots at just $4.99/month for your first year
+        </p>
+        <p className="text-lg text-purple-600 italic">
+          "Game-changing workflow" - Committed Marketer
+        </p>
+      </div>
     </div>
   );
 };
