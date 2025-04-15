@@ -1,3 +1,4 @@
+
 import { MessageSquare, FileText, Mail, Video, Megaphone, Star } from "lucide-react";
 
 export const CompactValue = () => {
@@ -19,34 +20,6 @@ export const CompactValue = () => {
     }
   ];
 
-  const useCase = [
-    {
-      icon: <Video className="w-5 h-5" />,
-      title: "Product Pages",
-      description: "Boost conversion with trust-building highlights"
-    },
-    {
-      icon: <MessageSquare className="w-5 h-5" />,
-      title: "Social Media",
-      description: "Create scroll-stopping hooks"
-    },
-    {
-      icon: <Megaphone className="w-5 h-5" />,
-      title: "Ad Content",
-      description: "Craft compelling video ads"
-    },
-    {
-      icon: <Mail className="w-5 h-5" />,
-      title: "Email Marketing",
-      description: "Engage subscribers with video clips"
-    },
-    {
-      icon: <FileText className="w-5 h-5" />,
-      title: "Blog Content",
-      description: "Enrich posts with video highlights"
-    }
-  ];
-
   return (
     <div className="py-12 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
@@ -58,19 +31,6 @@ export const CompactValue = () => {
                 <h3 className="text-lg font-semibold mb-1">{feature.title}</h3>
                 <p className="text-sm text-gray-600">{feature.description}</p>
               </div>
-            </div>
-          ))}
-        </div>
-        
-        <h2 className="text-2xl font-bold mb-6 text-center">Use HIGHLIGHTS for all of your Video Marketing</h2>
-        <div className="grid md:grid-cols-5 gap-4 mb-8">
-          {useCase.map((item, index) => (
-            <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
-              <div className="flex justify-center mb-2 text-purple-600">
-                {item.icon}
-              </div>
-              <h3 className="font-semibold mb-1">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
             </div>
           ))}
         </div>
