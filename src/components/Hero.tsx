@@ -25,8 +25,7 @@ export const Hero = () => {
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
       <p className="mt-4 text-sm text-gray-500">
-        Currently supporting {" "}
-        <span className="font-semibold text-purple-600">7 early adopters</span>{" "}
+        Currently <span className="font-semibold text-purple-600">7 founders have committed</span>{" "}
         — Limited spots available
       </p>
     </div>

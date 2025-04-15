@@ -34,11 +34,11 @@ export const Pricing = () => {
             </Button>
             
             <p className="text-sm text-gray-500">
-              Currently supporting 7 early adopters.{" "}
+              7 founders have already committed.{" "}
               <a href="#waitlist" className="text-purple-600 hover:text-purple-700 underline">
                 Join our waitlist
               </a>{" "}
-              if spots are full
+              if spots are filling up
             </p>
           </div>
         </div>
