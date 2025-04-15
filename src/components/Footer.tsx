@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Instagram, Tiktok } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 export const Footer = () => {
@@ -21,7 +21,23 @@ export const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600">
-                <Tiktok className="h-5 w-5" />
+                {/* Using a custom SVG for TikTok since lucide-react doesn't have a TikTok icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-5 w-5"
+                >
+                  <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                  <path d="M16 8v4a4 4 0 0 1-4 4"></path>
+                  <path d="M8 16v-8a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4"></path>
+                </svg>
               </a>
             </div>
           </div>
