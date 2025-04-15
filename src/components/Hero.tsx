@@ -1,3 +1,4 @@
+
 import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
 import { Button } from "./ui/button";
 import { CompactValue } from "./CompactValue";
@@ -78,3 +79,4 @@ export const Hero = () => {
     </div>
   );
 };
+
