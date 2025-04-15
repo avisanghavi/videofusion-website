@@ -65,7 +65,7 @@ export const Hero = () => {
       </p>
       
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Use HIGHLIGHTS for all of your Video Marketing</h2>
-      <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-12">
+      <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-6">
         {useCase.map((item, index) => (
           <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
             <div className="flex justify-center mb-2 text-purple-600">
