@@ -1,4 +1,3 @@
-
 import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
 import { Button } from "./ui/button";
 import { CompactValue } from "./CompactValue";
@@ -12,7 +11,7 @@ export const Hero = () => {
     },
     {
       icon: <MessageSquare className="w-5 h-5" />,
-      title: "Social Media",
+      title: "Social Media", 
       description: "Create scroll-stopping hooks"
     },
     {
@@ -61,7 +60,7 @@ export const Hero = () => {
         START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
-      <p className="text-sm text-gray-500 mb-12">
+      <p className="text-sm text-gray-500 mb-6">
         <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
       </p>
       
@@ -86,7 +85,7 @@ export const Hero = () => {
           50 exclusive spots at just $4.99/month for your first year
         </p>
         <p className="text-lg text-purple-600 italic">
-          "Game-changing workflow" - Committed Marketer
+          "Revenue Generating Moments" D2C Marketer
         </p>
       </div>
     </div>
