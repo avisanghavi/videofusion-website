@@ -9,8 +9,19 @@ export const Hero = () => {
         🚀 Early Access: 50 Exclusive Marketer Spots Available 🚀
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 max-w-3xl">
-        Turn Your <span className="text-purple-600">Existing Videos</span> Into Revenue-Generating Assets
+        Transform Your <span className="text-purple-600">Video Content</span> Into High-Converting Marketing Assets
       </h1>
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <div className="bg-purple-50 px-4 py-2 rounded-lg">
+          💰 No Editors
+        </div>
+        <div className="bg-purple-50 px-4 py-2 rounded-lg">
+          🎯 No Guesswork
+        </div>
+        <div className="bg-purple-50 px-4 py-2 rounded-lg">
+          ✨ No Fluff
+        </div>
+      </div>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl">
         Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
