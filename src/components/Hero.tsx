@@ -55,10 +55,9 @@ export const Hero = () => {
         Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
       
-      {/* Testimonial section moved above the CTA button to eliminate gap */}
-      <div className="max-w-2xl text-center mb-6">
-        <h2 className="text-3xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic">
+      <div className="max-w-2xl mb-4">
+        <h2 className="text-3xl font-bold mb-1">This Isn't Just Clipping — It's Conversion</h2>
+        <p className="text-lg text-purple-600 italic mb-2">
           "Revenue Generating Moments" D2C Marketer
         </p>
       </div>
@@ -70,7 +69,7 @@ export const Hero = () => {
         START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
-      <p className="text-sm text-gray-500 mb-6">
+      <p className="text-sm text-gray-500 mb-8">
         <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
       </p>
       
