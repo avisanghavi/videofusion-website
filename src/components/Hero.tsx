@@ -81,9 +81,6 @@ export const Hero = () => {
       
       <div className="mt-12 mb-8 max-w-2xl">
         <h2 className="text-3xl font-bold mb-4">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-xl text-gray-600 mb-2">
-          50 exclusive spots at just $4.99/month for your first year
-        </p>
         <p className="text-lg text-purple-600 italic">
           "Revenue Generating Moments" D2C Marketer
         </p>
