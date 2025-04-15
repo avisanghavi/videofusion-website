@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 py-16 text-center bg-gradient-to-b from-purple-50 to-white">
       <div className="bg-purple-100 text-purple-800 inline-block px-6 py-2 rounded-full text-sm font-semibold mb-8 animate-pulse">
-        🚀 Early Access: Limited Founders Spots Available 🚀
+        🚀 Early Access: Limited Marketing Innovator Spots Available 🚀
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 max-w-4xl">
         Introducing <span className="text-purple-600">HIGHLIGHTS</span>: Your AI Video Marketing Agent
@@ -21,11 +21,11 @@ export const Hero = () => {
         size="lg"
         className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
       >
-        JOIN THE FOUNDERS CIRCLE
+        JOIN THE MARKETER'S EDGE CIRCLE
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
       <p className="mt-4 text-sm text-gray-500">
-        Currently <span className="font-semibold text-purple-600">7 founders have committed</span>{" "}
+        Currently <span className="font-semibold text-purple-600">7 marketers have committed</span>{" "}
         — Limited spots available
       </p>
     </div>

@@ -6,24 +6,24 @@ export const Steps = () => {
     {
       title: "Upload your content",
       description: "Upload up to 10 minutes of your video content",
-      social: "\"Excited to test this out\" - Committed Founder"
+      social: "\"Excited to test this out\" - Committed Marketer"
     },
     {
       title: "AI Processing",
       description: "HIGHLIGHTS automatically clips Hooks, Social Proof, CTAs, and more",
-      social: "\"Game-changing workflow\" - Committed Founder"
+      social: "\"Game-changing workflow\" - Committed Marketer"
     },
     {
       title: "Review & Post",
       description: "Human in the loop: You just review & post what works — fast, simple, revenue-ready",
-      social: "\"Can't wait to streamline my process\" - Committed Founder"
+      social: "\"Can't wait to streamline my process\" - Committed Marketer"
     }
   ];
 
   return (
     <div className="py-16 px-4 bg-white">
       <h2 className="text-3xl font-bold text-center mb-4">How It Works in 3 Simple Steps</h2>
-      <p className="text-center text-gray-600 mb-12">7 founders are already committed to transforming their video strategy</p>
+      <p className="text-center text-gray-600 mb-12">7 marketers are already committed to transforming their video strategy</p>
       <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center text-center p-6 rounded-lg bg-purple-50 hover:shadow-lg transition-all">
