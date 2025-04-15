@@ -54,16 +54,16 @@ export const Hero = () => {
         Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
       </p>
       
-      <div className="max-w-2xl mb-2">
+      <div className="max-w-2xl mb-0">
         <h2 className="text-3xl font-bold">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic mb-2">
+        <p className="text-lg text-purple-600 italic mb-0">
           "Revenue Generating Moments" D2C Marketer
         </p>
       </div>
       
       <Button 
         size="lg"
-        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mb-4"
+        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mt-4 mb-4"
       >
         START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
