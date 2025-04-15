@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 py-12 text-center bg-gradient-to-b from-purple-50 to-white">
       <div className="bg-purple-100 text-purple-800 inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-        🚀 Early Access: Limited Marketing Innovator Spots Available 🚀
+        🚀 Early Access: 50 Exclusive Marketer Spots Available 🚀
       </div>
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 max-w-3xl">
         Turn Your <span className="text-purple-600">Existing Videos</span> Into Revenue-Generating Assets
@@ -22,8 +22,9 @@ export const Hero = () => {
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
       <p className="text-sm text-gray-500">
-        <span className="font-semibold text-purple-600">7 marketers have committed</span> to trying this out — Limited spots available
+        <span className="font-semibold text-purple-600">50 exclusive spots</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> if spots are full
       </p>
     </div>
   );
 };
+

@@ -1,5 +1,5 @@
 
-import { CheckCircle, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 export const CompactValue = () => {
   const features = [
@@ -38,7 +38,7 @@ export const CompactValue = () => {
         <div className="mt-8 text-center">
           <h2 className="text-2xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
           <p className="text-gray-600">
-            Lock in just $4.99/month for your first year with our limited early access offer
+            50 exclusive spots at just $4.99/month for your first year
           </p>
           <div className="flex justify-center gap-2 mt-4">
             <Star className="w-5 h-5 text-yellow-500 fill-current" />
@@ -49,3 +49,4 @@ export const CompactValue = () => {
     </div>
   );
 };
+
