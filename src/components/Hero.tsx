@@ -79,9 +79,9 @@ export const Hero = () => {
       
       <CompactValue />
       
-      <div className="mt-12 mb-8 max-w-2xl">
-        <h2 className="text-3xl font-bold mb-4">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic">
+      <div className="mt-8 mb-4 max-w-2xl text-center">
+        <h2 className="text-3xl font-bold mb-2">This Isn't Just Clipping — It's Conversion</h2>
+        <p className="text-lg text-purple-600 italic mb-4">
           "Revenue Generating Moments" D2C Marketer
         </p>
       </div>
