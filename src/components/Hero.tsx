@@ -32,8 +32,11 @@ export const Hero = () => {
         START WITH 10 FREE MINUTES
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 mb-4">
         <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
+      </p>
+      <p className="text-2xl font-bold text-gray-900">
+        Use HIGHLIGHTS for all of your Video Marketing
       </p>
     </div>
   );
