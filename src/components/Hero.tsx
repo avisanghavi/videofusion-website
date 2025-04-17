@@ -1,4 +1,4 @@
-import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone } from "lucide-react";
+import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone, Globe } from "lucide-react";
 import { Button } from "./ui/button";
 import { CompactValue } from "./CompactValue";
 
@@ -7,27 +7,32 @@ export const Hero = () => {
     {
       icon: <Video className="w-5 h-5" />,
       title: "Product Pages",
-      description: "Boost conversion with trust-building highlights"
+      description: "Build trust at checkout via social proof"
     },
     {
       icon: <MessageSquare className="w-5 h-5" />,
       title: "Social Media", 
-      description: "Create scroll-stopping hooks"
-    },
-    {
-      icon: <Megaphone className="w-5 h-5" />,
-      title: "Ad Content",
-      description: "Craft compelling video ads"
+      description: "Hook-driven UGC"
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      title: "Email Marketing",
-      description: "Engage subscribers with video clips"
+      title: "Email",
+      description: "Boost open + CTR with video"
+    },
+    {
+      icon: <Globe className="w-5 h-5" />,
+      title: "Social Shopping",
+      description: "Boost Sales with Social Proof and CTAs"
+    },
+    {
+      icon: <Megaphone className="w-5 h-5" />,
+      title: "Website",
+      description: "Engage and build trust with Social Proof with your customers"
     },
     {
       icon: <FileText className="w-5 h-5" />,
-      title: "Blog Content",
-      description: "Enrich posts with video highlights"
+      title: "Blog Posts",
+      description: "Embed high-performing moments"
     }
   ];
 
@@ -73,7 +78,7 @@ export const Hero = () => {
       </p>
       
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Use HIGHLIGHTS for all of your Video Marketing</h2>
-      <div className="grid md:grid-cols-5 gap-4 max-w-5xl w-full mb-8">
+      <div className="grid md:grid-cols-6 gap-4 max-w-5xl w-full mb-8">
         {useCase.map((item, index) => (
           <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
             <div className="flex justify-center mb-2 text-purple-600">
