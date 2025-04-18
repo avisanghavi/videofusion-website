@@ -5,8 +5,8 @@ export const HowItWorks = () => {
   const steps = [
     {
       number: "1",
-      title: "Upload Once, Create Many",
-      description: "Transform a single video into dozens of viral clips. Upload up to 10 minutes of content and let our AI identify the golden moments worth sharing.",
+      title: "Multiply Your Content Library",
+      description: "Transform your UGC and marketing videos into dozens of viral clips. Upload your best content and let our AI identify the golden moments worth sharing.",
       icon: <Upload className="w-7 h-7" />,
       gradient: "from-[#9146FF] to-[#B164FF]",
       delay: 0.2
@@ -21,8 +21,8 @@ export const HowItWorks = () => {
     },
     {
       number: "3",
-      title: "Dominate Social Media",
-      description: "Get platform-optimized clips that stop the scroll. Each clip is perfectly timed, captioned, and formatted for maximum engagement across all platforms.",
+      title: "Dominate Every Channel",
+      description: "Instantly power up your PDPs, blogs, newsletters, social media, and social shopping experiences with AI-crafted clips designed to convert. Every clip is precision-timed, strategically positioned, and perfectly formatted—turning every channel into a high-performance engagement engine.",
       icon: <Share2 className="w-7 h-7" />,
       gradient: "from-[#B164FF] to-[#FF6B8B]",
       delay: 0.6

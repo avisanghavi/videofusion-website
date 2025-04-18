@@ -120,9 +120,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mx-auto font-normal mt-8">
-              Let AI transform content into attention-grabbing shorts. 
-              Get CTA's, viral hooks, testimonials, and key moments — automatically optimized 
-              for TikTok, Reels, and YouTube Shorts.
+              Turn videos into viral hits—AI spots your best hooks, magnetic CTAs, authentic testimonials, and standout moments, instantly optimized for TikTok, Reels & YouTube Shorts.
             </p>
           </motion.div>
 

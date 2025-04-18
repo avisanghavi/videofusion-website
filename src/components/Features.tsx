@@ -15,37 +15,39 @@ export const Features = () => {
     {
       icon: <PhosphorIcons.Article weight="duotone" className="w-8 h-8" />,
       title: "Convert More on Product Pages",
-      description: "Turn browsers into buyers with authentic customer stories. Our AI automatically surfaces your most persuasive testimonials at the perfect moment."
+      description: "Turn browsers into buyers with **persuasive testimonials**. Our AI automatically surfaces your most compelling customer stories at the perfect moment."
     },
     {
       icon: <PhosphorIcons.ShareNetwork weight="duotone" className="w-8 h-8" />,
       title: "Dominate Social Media",
-      description: "Stand out in crowded feeds with AI-curated viral moments. Create thumb-stopping content that captures attention and drives meaningful engagement."
+      description: "Stand out in crowded feeds with **thumb-stopping content**. Create attention-grabbing moments that capture viewers and drive meaningful engagement."
     },
     {
       icon: <PhosphorIcons.EnvelopeSimple weight="duotone" className="w-8 h-8" />,
       title: "Supercharge Your Email ROI",
-      description: "Transform your email campaigns with dynamic video previews. Instantly grab attention and drive action with your most compelling moments."
+      description: "Transform campaigns with **dynamic video previews**. Instantly grab attention and drive action with your most compelling moments."
     },
     {
       icon: <PhosphorIcons.ShoppingBag weight="duotone" className="w-8 h-8" />,
       title: "Maximize Social Shopping",
-      description: "Turn passive scrollers into excited buyers. Showcase your most persuasive product moments and social proof exactly when it matters most."
+      description: "Turn scrollers into buyers with **persuasive product moments**. Showcase your best social proof exactly when it matters most."
     },
     {
       icon: <PhosphorIcons.Globe weight="duotone" className="w-8 h-8" />,
       title: "Elevate Your Website",
-      description: "Keep visitors engaged with perfectly-timed social proof. Transform your website into an immersive experience that builds trust and drives action."
+      description: "Keep visitors engaged with **perfectly-timed social proof**. Transform your website into an immersive experience that builds trust."
     },
     {
       icon: <PhosphorIcons.BookOpen weight="duotone" className="w-8 h-8" />,
       title: "Revolutionize Blog Content",
-      description: "Turn long-form content into captivating experiences. Strategically placed video highlights keep readers engaged and guide them toward conversion."
+      description: "Make content captivating with **strategic video highlights**. Keep readers engaged and guide them toward conversion."
     }
   ];
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  let autoRotateInterval: NodeJS.Timeout;
 
   useEffect(() => {
     if (!api) return;
@@ -54,14 +56,31 @@ export const Features = () => {
       setCurrent(api.selectedScrollSnap());
     });
 
-    // Set up auto-rotation
-    const autoRotate = setInterval(() => {
-      api.scrollNext();
-    }, 4000);
+    // Set up auto-rotation only when not paused
+    const startAutoRotate = () => {
+      if (!isPaused) {
+        autoRotateInterval = setInterval(() => {
+          api.scrollNext();
+        }, 4000);
+      }
+    };
 
-    // Clean up interval on unmount
-    return () => clearInterval(autoRotate);
-  }, [api]);
+    startAutoRotate();
+
+    // Clean up interval on unmount or when paused
+    return () => clearInterval(autoRotateInterval);
+  }, [api, isPaused]);
+
+  const renderDescription = (description: string) => {
+    // Split the description by bold markers and map to spans
+    return description.split('**').map((part, index) => {
+      if (index % 2 === 1) {
+        // Odd indices are the bold parts
+        return <span key={index} className="font-semibold">{part}</span>;
+      }
+      return part;
+    });
+  };
 
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
@@ -88,6 +107,8 @@ export const Features = () => {
               {features.map((feature, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <div
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
                     className={cn(
                       "bg-white/80 backdrop-blur-sm rounded-3xl p-8 transition-all duration-500 border border-gray-100/20",
                       current === index 
@@ -104,7 +125,7 @@ export const Features = () => {
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 font-[350] leading-relaxed text-[15px]">
-                      {feature.description}
+                      {renderDescription(feature.description)}
                     </p>
                   </div>
                 </CarouselItem>
