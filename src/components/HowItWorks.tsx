@@ -50,7 +50,7 @@ export const HowItWorks = () => {
             CONTENT THAT CONVERTS
           </span>
           <h2 className="text-3xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
-            From Long-Form to{" "}
+            From Wasted Content to{" "}
             <span className="relative">
               <span className="bg-gradient-to-r from-[#9146FF] to-[#FF6B8B] text-transparent bg-clip-text">
                 Viral Gold
