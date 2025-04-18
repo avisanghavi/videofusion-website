@@ -1,96 +1,173 @@
-import { ArrowRight, MessageSquare, FileText, Mail, Video, Megaphone, Globe } from "lucide-react";
-import { Button } from "./ui/button";
-import { CompactValue } from "./CompactValue";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Wand2, Timer, Target } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export const Hero = () => {
-  const useCase = [
-    {
-      icon: <Video className="w-5 h-5" />,
-      title: "Product Pages",
-      description: "Build trust at checkout via social proof"
-    },
-    {
-      icon: <MessageSquare className="w-5 h-5" />,
-      title: "Social Media", 
-      description: "Hook-driven UGC"
-    },
-    {
-      icon: <Mail className="w-5 h-5" />,
-      title: "Email",
-      description: "Boost open + CTR with video"
-    },
-    {
-      icon: <Globe className="w-5 h-5" />,
-      title: "Social Shopping",
-      description: "Boost Sales with Social Proof and CTAs"
-    },
-    {
-      icon: <Megaphone className="w-5 h-5" />,
-      title: "Website",
-      description: "Engage and build trust with Social Proof with your customers"
-    },
-    {
-      icon: <FileText className="w-5 h-5" />,
-      title: "Blog Posts",
-      description: "Embed high-performing moments"
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
     }
+  }, []);
+
+  const features = [
+    { 
+      icon: <Wand2 className="w-5 h-5" />, 
+      text: "No Editors",
+      gradient: "from-[#9146FF] to-[#B164FF]" 
+    },
+    { 
+      icon: <Timer className="w-5 h-5" />, 
+      text: "No Guesswork",
+      gradient: "from-[#FF6B8B] to-[#FF8BA7]" 
+    },
+    { 
+      icon: <Target className="w-5 h-5" />, 
+      text: "No Fluff",
+      gradient: "from-[#B164FF] to-[#FF6B8B]" 
+    },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-12 text-center bg-gradient-to-b from-purple-50 to-white">
-      <div className="bg-purple-100 text-purple-800 inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-        🚀 Early Access: 50 Exclusive Marketer Spots Available 🚀
-      </div>
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 max-w-3xl">
-        Transform Your <span className="text-purple-600">Video Content</span> Into High-Converting Marketing Assets
-      </h1>
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
-        <div className="bg-purple-50 px-4 py-2 rounded-lg">
-          💰 No Editors
+    <div className="min-h-[90vh] relative overflow-hidden font-['Space_Grotesk']">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ 
+            filter: 'brightness(0.98)',
+            transform: 'scale(1.02)',
+            minWidth: '100%',
+            minHeight: '100%',
+          }}
+        >
+          <source src="/bubblebubble.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Enhanced Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/75 via-white/70 to-white/75" />
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#9146FF] rounded-full filter blur-[150px] opacity-[0.04] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#FF6B8B] rounded-full filter blur-[150px] opacity-[0.04] animate-pulse" />
         </div>
-        <div className="bg-purple-50 px-4 py-2 rounded-lg">
-          🎯 No Guesswork
+      </div>
+
+      <div className="relative z-10 pt-24 lg:pt-32 px-6">
+        <div className="max-w-[1200px] mx-auto relative flex flex-col items-center text-center">
+          {/* Early Access Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm shadow-lg px-6 py-2.5 rounded-full text-gray-800 mb-16 border border-gray-100"
+          >
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9146FF] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#9146FF]"></span>
+            </span>
+            <span className="font-medium">Limited Release: Only 50 Spots Available</span>
+          </motion.div>
+
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-6 mb-16"
+          >
+            <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 max-w-4xl leading-[1.1] mx-auto tracking-tight">
+              Convert Existing Content Into{" "}
+              <span className="relative">
+                <span className="bg-gradient-to-r from-[#9146FF] via-[#FF6B8B] to-[#9146FF] text-transparent bg-clip-text animate-gradient">
+                  Viral Shorts
+                </span>
+                <motion.svg
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="absolute -bottom-2 left-0 w-full hidden lg:block"
+                  width="100%"
+                  height="6"
+                  viewBox="0 0 100 6"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0,5 Q25,0 50,5 T100,5"
+                    stroke="url(#gradient)"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient id="gradient" x1="0" y1="0" x2="100%" y2="0">
+                      <stop offset="0%" stopColor="#9146FF" />
+                      <stop offset="100%" stopColor="#FF6B8B" />
+                    </linearGradient>
+                  </defs>
+                </motion.svg>
+              </span>
+              {" "}in Seconds
+            </h1>
+
+            <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mx-auto font-normal mt-8">
+              Let AI transform content into attention-grabbing shorts. 
+              Get CTA's, viral hooks, testimonials, and key moments — automatically optimized 
+              for TikTok, Reels, and YouTube Shorts.
+            </p>
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mb-16"
+          >
+            <a
+              href="https://app.videofusion.io/auth/sign-up"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center bg-gradient-to-r from-[#9146FF] to-[#FF6B8B] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Try it Free
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+          </motion.div>
+
+          {/* Feature Badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex flex-wrap gap-6 justify-center"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm shadow-lg px-6 py-3 rounded-full text-gray-800 border border-gray-100 hover:shadow-xl transition-all duration-300"
+              >
+                <div className={`bg-gradient-to-r ${feature.gradient} w-8 h-8 rounded-full flex items-center justify-center`}>
+                  <span className="text-white">{feature.icon}</span>
+                </div>
+                <span className="font-semibold">{feature.text}</span>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-        <div className="bg-purple-50 px-4 py-2 rounded-lg">
-          ✨ No Fluff
-        </div>
       </div>
-      <p className="text-lg text-gray-600 mb-6 max-w-2xl">
-        Try now with 10 free minutes of video processing. No credit card required. After your trial, unlock more minutes starting at $5 per 10 minutes for early adopters (regular price: $20).
-      </p>
-      
-      <div className="max-w-2xl mb-2">
-        <h2 className="text-3xl font-bold">This Isn't Just Clipping — It's Conversion</h2>
-        <p className="text-lg text-purple-600 italic mb-2">
-          "Revenue Generating Moments" D2C Marketer
-        </p>
-      </div>
-      
-      <Button 
-        size="lg"
-        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold transition-all transform hover:scale-105 mb-4"
-      >
-        START WITH 10 FREE MINUTES
-        <ArrowRight className="ml-2 h-5 w-5" />
-      </Button>
-      <p className="text-sm text-gray-500 mb-8">
-        <span className="font-semibold text-purple-600">50 exclusive spots at $5/10min</span> — <a href="#waitlist" className="text-purple-600 underline">Join Waitlist</a> for regular pricing
-      </p>
-      
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Use HIGHLIGHTS for all of your Video Marketing</h2>
-      <div className="grid md:grid-cols-6 gap-4 max-w-5xl w-full mb-8">
-        {useCase.map((item, index) => (
-          <div key={index} className="p-4 rounded-lg bg-gray-50 text-center">
-            <div className="flex justify-center mb-2 text-purple-600">
-              {item.icon}
-            </div>
-            <h3 className="font-semibold mb-1">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.description}</p>
-          </div>
-        ))}
-      </div>
-      
-      <CompactValue />
     </div>
   );
 };

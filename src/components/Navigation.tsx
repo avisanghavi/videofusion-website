@@ -1,34 +1,63 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 export const Navigation = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
-    <nav className="w-full bg-white border-b border-gray-100 py-4 px-6">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed w-full z-50 py-4 px-6 ${
+        isHome
+          ? "bg-white/5 backdrop-blur-sm border-b border-gray-100/20 shadow-sm"
+          : "bg-white/80 backdrop-blur-sm border-b border-gray-100 shadow-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link to="/" className="text-xl font-bold">
-            <img 
-              src="/lovable-uploads/ffe6ee07-3ac4-49de-b817-2f08723c42e0.png" 
-              alt="Videofusion"
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="flex items-center gap-4"
+        >
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src="/lovable-uploads/ffe6ee07-3ac4-49de-b817-2f08723c42e0.png"
+              alt="VideoFusion"
               className="h-8"
             />
           </Link>
-        </div>
-        
-        <div className="flex items-center gap-4">
-          <Link to="/" className="text-gray-600 hover:text-purple-600 transition-colors">
-            Home
-          </Link>
-          <Link to="/login" className="text-gray-600 hover:text-purple-600 transition-colors">
-            Log in
-          </Link>
-          <Button asChild>
-            <Link to="/free" className="bg-purple-600 hover:bg-purple-700">
-              Free HIGHLIGHTS
-            </Link>
-          </Button>
+        </motion.div>
+
+        <div className="flex items-center gap-8">
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <a
+              href="https://app.videofusion.io/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+            >
+              Login
+            </a>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a
+              href="https://app.videofusion.io/auth/sign-up"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-gradient-to-r from-[#9146FF] to-[#FF6B8B] text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300 overflow-hidden"
+            >
+              <span className="relative z-10">Free Trial</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B8B] to-[#9146FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </a>
+          </motion.div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
