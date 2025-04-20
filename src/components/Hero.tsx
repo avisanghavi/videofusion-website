@@ -147,7 +147,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mb-16"
+            className="mb-8"
           >
             <a
               href="https://app.videofusion.io/auth/sign-up"
@@ -167,18 +167,18 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-wrap gap-4 md:gap-6 justify-center px-4 md:px-0"
+            className="flex items-center justify-center gap-6 w-full max-w-2xl mx-auto"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center gap-2 md:gap-3 bg-white/90 backdrop-blur-sm shadow-lg px-4 md:px-6 py-2 md:py-3 rounded-full text-gray-800 border border-gray-100 hover:shadow-xl transition-all duration-300"
+                className="flex items-center gap-2 bg-white/90 backdrop-blur-sm shadow-sm px-4 py-2 rounded-full text-gray-800 border border-gray-100/50"
               >
-                <div className={`bg-gradient-to-r ${feature.gradient} w-7 md:w-8 h-7 md:h-8 rounded-full flex items-center justify-center`}>
+                <div className={`bg-gradient-to-r ${feature.gradient} w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0`}>
                   <span className="text-white">{feature.icon}</span>
                 </div>
-                <span className="font-semibold text-sm md:text-base">{feature.text}</span>
+                <span className="font-medium text-sm whitespace-nowrap">{feature.text}</span>
               </motion.div>
             ))}
           </motion.div>
