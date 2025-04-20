@@ -122,6 +122,24 @@ export const Hero = () => {
             <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mx-auto font-normal mt-8">
               Turn videos into viral hits—AI spots your best hooks, magnetic CTAs, authentic testimonials, and standout moments, instantly optimized for TikTok, Reels & YouTube Shorts.
             </p>
+
+            {/* Supported Content Types */}
+            <div className="flex flex-wrap gap-4 justify-center mt-8 mb-8">
+              {[
+                "UGC",
+                "Influencer Marketing",
+                "Branded Video Content"
+              ].map((type, index) => (
+                <div
+                  key={index}
+                  className="bg-white/90 backdrop-blur-sm border border-[#9146FF]/20 px-6 py-3 rounded-full"
+                >
+                  <span className="text-gray-800 font-semibold bg-gradient-to-r from-[#9146FF] to-[#FF6B8B] bg-clip-text text-transparent">
+                    {type}
+                  </span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* CTA Button */}

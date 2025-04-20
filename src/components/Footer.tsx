@@ -1,4 +1,5 @@
 import { Instagram, Youtube, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -63,30 +64,24 @@ export const Footer = () => {
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-white/60">
-          <a
-            href="https://videofusion.io/terms-conditions/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/terms-conditions/"
             className="hover:text-white transition-colors duration-300"
           >
             Terms & Conditions
-          </a>
-          <a
-            href="https://videofusion.io/privacy-policy/"
-            target="_blank"
-            rel="noopener noreferrer"
+          </Link>
+          <Link
+            to="/privacy-policy/"
             className="hover:text-white transition-colors duration-300"
           >
             Privacy Policy
-          </a>
-          <a
-            href="https://videofusion.io/videofusion-supplemental-california-privacy-disclosure/"
-            target="_blank"
-            rel="noopener noreferrer"
+          </Link>
+          <Link
+            to="/ccpa/"
             className="hover:text-white transition-colors duration-300"
           >
             CCPA
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
