@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    {
+      "source": "/legal/:path*",
+      "destination": "/legal/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/legal/(.*)",
+      "dest": "/legal/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    }
+  ]
+} 
