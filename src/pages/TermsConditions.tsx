@@ -3,27 +3,113 @@ import { LegalPageLayout } from '../components/LegalPageLayout';
 
 export const TermsConditions = () => {
   return (
-    <LegalPageLayout title="Videofusion Terms & Conditions">
-      <div className="w-full max-w-5xl mx-auto p-4">
-        <object
-          data="/legal/terms-conditions.pdf"
-          type="application/pdf"
-          className="w-full h-[calc(100vh-200px)] border rounded-lg"
-        >
-          <div className="text-center py-8">
-            <p className="text-gray-700 mb-4">
-              Unable to display PDF.{' '}
-              <a 
-                href="/legal/terms-conditions.pdf"
-                className="text-purple-600 hover:text-purple-800 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download Terms & Conditions PDF
-              </a>
-            </p>
-          </div>
-        </object>
+    <LegalPageLayout title="Videofusion End-User Licensing">
+      <div className="w-full max-w-5xl mx-auto p-8">
+        <div className="prose prose-lg max-w-none">
+          <p>Welcome to Videofusion! We're glad you're here and we hope you enjoy our services. Please read this document carefully before proceeding. This is a legal agreement between you, a Videofusion customer ("you", "your", "yours", "Customer", or "User") and Videofusion Inc., a Delaware corporation ("Videofusion", "we", "us", or "our") (individually a "Party" and collectively the "Parties") and governs your use of Videofusion's Highlights and Ad Inspiration and the Videofusion platform, along with other services made available or accessed by you through the Videofusion website (the "Site") (collectively, the "Services"). By creating an account with us, you agree to be bound by the terms of this End-User Licensing Agreement ("Agreement") in its entirety. The individual creating an account with us represents and warrants that he or she has the necessary authority to bind the Customer. The Customer entity on behalf of whom the individual is creating an account represents and warrants that you are validly formed and existing under the laws of your jurisdiction of formation, that you have full power and authority to enter into this Agreement, and that you have duly authorized your agent to bind you to this Agreement.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">1. User Account</h2>
+          <p>To get started, we will create an account for you with us. To receive the Services, which include access to our platform's features like the Highlights and Videofusion platform, you must register for an account on the Site ("Account"). At any point during the Subscription Term, you may request changes in the Services through written communication or by opting to upgrade. Videofusion will then provide you with the requested services, along with the applicable Fees.</p>
+          <p>You must provide accurate and complete information for your Account. Upon registration, you will be given access credentials such as a username, password, PIN, or other security code. Access to the Services will initially be limited to the number of Authorized Users, though you can request additional access at any time by reaching out to us at <a href="mailto:legal@Videofusion.ai" className="text-purple-600 hover:text-purple-800">legal@Videofusion.ai</a>. The term "Authorized User" refers to your employees, consultants, contractors, and agents who are permitted by you to use the Services. Access credentials should not be shared with others for the purpose of using the Services.</p>
+          <p>You are responsible for maintaining the security of your account and Access Credentials, and for any actions, omissions, or breaches by your Authorized Users or anyone else using your Account or Access Credentials. It's essential to keep your Account information updated and notify us immediately if there is any change in your eligibility to use the Services, any breach of security, or unauthorized use of your Account. If you are an Authorized User of an Account purchased by your employer or another entity, this Agreement allows that entity to provision additional services or change or limit your access to the Services at any time. It is up to that entity to inform you of any specific rules, requirements, or limitations regarding your use beyond those set forth in this Agreement. You agree to resolve any disputes related to such additional rules, requirements, or limitations directly with that entity.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">2. Subscription and Payments</h2>
+          <ol className="list-alpha">
+            <li className="mb-4">You may be eligible to receive certain or all of our Services, including features of our Videofusion Platform such as the Highlights and Ad Inspiration, without any fees for a limited or unlimited duration, as decided and notified by us in our sole discretion ("Freemium Subscription"). We may discontinue your use of the Freemium Subscription in part or full, with or without cause, by providing written notice to you. Upon completion of the allowed duration of the Freemium Subscription for certain or all Services, including those related to Highlights and Ad Inspiration, you shall pay all applicable fees stated on the Site or as specified by us in a written communication sent to you ("Fees"). All Fees are payable according to the payment terms stated on the Site. You may choose to upgrade different Services at different times, and in such cases, you may be charged for all applicable Services collectively or separately on the respective monthly anniversary of the upgrade. If you have questions concerning the payment terms and payment schedules, please reach out to us at <a href="mailto:legal@Videofusion.ai" className="text-purple-600 hover:text-purple-800">legal@Videofusion.ai</a>.</li>
+            
+            <li className="mb-4">You are responsible for paying the specified Fee for all the Services you sign up for, including those related to Highlights and Ad Inspiration, for the duration of the entire Subscription Term, even if you are paying monthly, the Subscription Term ends early due to termination without cause by you, or you stop using the Services before the end of the Subscription Term. You may elect to pay the Fees for the Services on either a monthly or annual basis as agreed upon by both Parties. Fees subject to monthly payment are due and payable in advance on a monthly basis, while Fees subject to annual payment are due and payable in advance on an annual basis. You must provide us with one or more Payment Methods. A Payment Method means a current, valid, accepted method of payment, which may include payment through your account with a third party. If you fail to make timely payment on any Fees, Videofusion reserves the right to withhold or suspend your access and use of the Services, including those related to Highlights and Ad Inspiration, until all past-due payments are made. Videofusion shall have the right to charge interest at the rate of 1.5% per month, or the highest rate permitted by applicable law, whichever is lower. Videofusion does not give credits or refunds for any Fees once paid. Fees may change from time to time, so please review the pricing matrix periodically for the most current fees and payment terms. Since our Fees are based on the total number of your subscribers, any increase or decrease in your subscribers may lead to the application of reduced or increased Fees, which will either be charged automatically on your next scheduled payment of Fees or by sending a written notice to you for the modified payment. Your continued access and use of the Services after we have notified you of any such modifications to the Fees shall constitute your acceptance of such modifications to the Fees. Fees do not include any local, state, federal, or foreign taxes or any other charges of any nature imposed by any governmental entity. You are responsible for and agree to pay any applicable government authority all taxes or other charges resulting from your use of the Services. Please note that if you have executed a separate written agreement with one of our authorized partners regarding payment of Fees, then such separate agreement, and not this Section 2, shall apply to you.</li>
+
+            <li className="mb-4">We currently use Stripe as our third-party payment processor (the "Payment Processor") to bill you through the Payment Method linked to your Account on the Services, including those related to Highlights and Ad Inspiration and the Videofusion platform (the "Billing Account"). The processing of payments will be subject to the terms, conditions, and privacy policies of the Payment Processor. We are not responsible for errors by the Payment Processor. We reserve the right to correct any errors or mistakes that the Payment Processor makes, even if the Payment Processor has already requested or received payment. The terms of your payment will be based on your Payment Method and may be determined by agreements between you and the financial institution, credit card issuer, or other providers of your chosen Payment Method. If we, through the Payment Processor, do not receive payment from you, you agree to pay all the amounts due on your Billing Account on demand. Videofusion may suspend or limit your use of the Services, including those involving Highlights, Ad Inspiration and other related tools, if Videofusion is unable to collect payment of any Fees when due, including if a charge to your payment card or bank account is denied for any reason.</li>
+
+            <li className="mb-4">Auto-Renewal. Fees are automatically charged on a recurring basis. Unless you cancel or change your Subscription in accordance with this Agreement, any Subscriptions you have signed up for, including those related to Highlights and Ad Inspiration and the Videofusion platform, will be automatically extended for successive renewal periods of the same duration as the Subscription Term (as defined below) originally selected, at the then-current non-promotional rate.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">3. Acceptance of the Agreement</h2>
+          <ol className="list-alpha">
+            <li className="mb-4">By subscribing for and/or using any of the Services, in any manner including visiting or browsing the Videofusion Website, you agree to this Agreement, and all other operating rules, policies and procedures that we may publish from time to time through the Services, each of which is incorporated by reference, and each of which may be updated from time to time without notice to you.</li>
+            <li className="mb-4">Certain Services may be subject to additional terms and conditions specified by us from time to time; your use of such Services is subject to those additional terms and conditions, which are incorporated into this Agreement by this reference.</li>
+            <li className="mb-4">This Agreement applies to all users of the Services. Please note that if you have executed a separate written agreement with us regarding your use of certain of our Services ("Separate Agreement"), then that Separate Agreement, and not this Agreement, apply to those Services. Notwithstanding the foregoing, if you use any Beta Services (as defined below), such use will be subject to this Agreement (any other different or additional legal terms presented to you in association with such use), even if you have executed a Separate Agreement.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">4. Ownership and Data Usage</h2>
+          <p>"Content" means information, interfaces, utilities, forms, documentation, content, tools, features, text, graphic, images, data, or any other materials posted, generated, provided, or otherwise made available through Videofusion Services or Videofusion Website. "User Content" means any and all content submitted, linked to, or made available to the Services by you or by a third party on your behalf (including any modifications thereto made by you or your Authorized Users). You retain all of your rights to your User Content.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">5. Third-Party Links and Content</h2>
+          <p>There may be links on the Services that let you leave the particular Service you're accessing in order to access a linked site that is operated by a third party. Videofusion neither controls nor endorses those sites nor has Videofusion reviewed or approved the content that appears on them. Videofusion is not responsible for the legality, accuracy or inappropriate nature of any content, advertising, products, or other materials on or available from any such third-party sites. You acknowledge and agree that Videofusion is not responsible or liable, directly or indirectly, for any damages or loss caused or alleged to be caused by or in connection with the access or use of any of the links, content, goods, or services available through these third party sites.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">6. Beta Services</h2>
+          <p>From time to time Videofusion may offer you access to alphas, betas, limited releases, or other pre-General Availability services or features (collectively "Beta Services"). Beta Services may have limited features, functions, data storage, data security, data retention or other limitations as determined by Videofusion. You acknowledge and agree that Beta Services may not be complete or fully functional, and may contain bugs, errors, omissions, and other problems for which Videofusion will not be responsible. Accordingly, any use of Beta Services is at your sole risk.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">7. Confidentiality</h2>
+          <p>"Confidential Information" means all information disclosed by Videofusion to you, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Videofusion's Confidential Information includes the Services and Content, as well as business and marketing plans, technology and technical information, product plans and designs, source code and business processes disclosed by Videofusion. You will use a reasonable degree of care to protect Confidential Information. You will not use any Confidential Information for any purpose outside the scope of this Agreement or disclose Confidential Information to any third party. You may disclose Confidential Information to the extent compelled by law, provided you give Videofusion prior notice of the compelled disclosure (to the extent legally permitted) and reasonable assistance, at Videofusion's cost, if Videofusion wishes to contest the disclosure.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">8. Intellectual Property Usage and Reporting Infringement</h2>
+          <p>Videofusion respects the intellectual property of others, and we require our customers to do the same. Each Customer is responsible for ensuring that their User Content does not infringe third party's rights or other intellectual property rights. All Content, text, graphics, user interfaces, visual interfaces, photographs, trademarks, logos, sounds, music, artwork and computer code contained on our Site (collectively,"Site Content") including but not limited to the design, structure, selection, coordination, expression, "look and feel" and arrangement of such Site Content, and any improvements, changes or enhancements thereto, are owned, controlled or licensed by or to Videofusion, and are protected by trade dress, copyright, patent and trademark laws, and other intellectual property rights and unfair competition laws.</p>
+          <p>If you believe that Videofusion Services or any Site Content contains elements that infringe or misappropriate your copyrights or other intellectual property rights please contact the designated agent to receive notifications for Videofusion at: <a href="mailto:legal@Videofusion.ai" className="text-purple-600 hover:text-purple-800">legal@Videofusion.ai</a>. Please provide the following information in your notice:</p>
+          <ol className="list-decimal pl-5">
+            <li>the name and description of intellectual property work and of the allegedly infringing work;</li>
+            <li>your name, address, daytime phone number and email address;</li>
+            <li>a statement that you have a good-faith belief that the use of the claimed intellectual property work is not authorized by the owner or applicable law;</li>
+            <li>a statement that the information in the notification is accurate and, under penalty of perjury, that you are authorized to act on behalf of the owner; and</li>
+            <li>your electronic or physical signature.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">9. Term and Termination</h2>
+          <ol className="list-alpha">
+            <li className="mb-4">
+              <strong>Term</strong> Unless otherwise specified by us in writing that Services are for a one-time subscription or the Services are terminated in accordance with this Section 9, the term for this Agreement and applicable Services shall be annual and shall take effect on the date you first sign up for the paid Services through your Account which will automatically renew for additional annual terms (collectively, "Subscription Term"). The Subscription Term shall not change upon any addition of new Services and the new Services shall be charged pro-rated for the duration of the remainder of the Subscription Term.
+            </li>
+            <li className="mb-4">
+              <strong>Termination without cause</strong> Either Party may provide notice of non-renewal of the Subscription Term to the other Party at least thirty (30) days prior to the end of any term. You may terminate in accordance with this Section by contacting us at <a href="mailto:legal@Videofusion.ai" className="text-purple-600 hover:text-purple-800">legal@Videofusion.ai</a>
+            </li>
+            <li className="mb-4">
+              <strong>Termination for cause</strong> Either Party may terminate Services if the other Party materially breaches this Agreement and fails to cure the material breach within thirty (30) days following notice of the material breach from the non-breaching Party. Videofusion may suspend or limit your use of any Services upon any actual or suspected breach of your obligations under this Agreement or applicable law, or if Videofusion reasonably believes your conduct is inappropriate or detrimental to Videofusion or any third party. If the cause of the suspension can reasonably be remedied, Videofusion will provide notice of the actions you must take to reinstate access to the Services. Any suspension will not limit any other right or remedy available to Videofusion under applicable law. Upon discontinuation or termination of a part of Services or any related offering, promotion, or discount with or without cause, this Agreement shall continue in full force and effect with respect to parts of Services or any related offering, promotion, or discount that is not so discontinued or terminated.
+            </li>
+            <li className="mb-4">
+              <strong>Survival</strong> All provisions of this Agreement which by their nature should survive termination or expiration shall survive termination, including provisions regarding ownership, aggregate data use, payment (to the extent any payment obligations remain outstanding), warranty, disclaimers, indemnity, and limitations of liability.
+            </li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">10. Disclaimer Of Warranties</h2>
+          <ol className="list-alpha">
+            <li className="mb-4">While it is in Videofusion's interest to provide you with a great experience while using Services and/or Videofusion Website, there are certain things we do not promise about them. YOUR USE OF THE SERVICES AND/OR Videofusion WEBSITE IS AT YOUR SOLE RISK UNLESS OTHERWISE EXPLICITLY STATED. SERVICES AND/OR Videofusion WEBSITE, INCLUDING THE INFORMATION, IS PROVIDED ON AN "AS IS" "AS AVAILABLE" AND "WITH ALL FAULTS" BASIS. Videofusion DISCLAIMS ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS, AND WARRANTIES OF ANY KIND, INCLUDING ANY IMPLIED WARRANTY OR CONDITION OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. Videofusion MAKES NO REPRESENTATIONS, WARRANTIES, CONDITIONS OR GUARANTEES AS TO THE USEFULNESS QUALITY, SUITABILITY, TRUTH, ACCURACY OR COMPLETENESS OF SERVICES AND/OR Videofusion WEBSITE.</li>
+
+            <li className="mb-4">Videofusion MAKES NO WARRANTY OR REPRESENTATION THAT:
+              <ol className="list-roman">
+                <li>THE SERVICES AND/OR Videofusion WEBSITE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE;</li>
+                <li>THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SERVICES AND/OR Videofusion WEBSITE WILL BE ACCURATE OR RELIABLE; OR</li>
+                <li>THE QUALITY OF ANY PRODUCTS, SERVICES, CONTENT, INFORMATION, OR OTHER MATERIAL OBTAINED FROM SERVICES AND/OR Videofusion WEBSITE WILL MEET YOUR EXPECTATIONS OR REQUIREMENTS.</li>
+              </ol>
+            </li>
+
+            <li className="mb-4">YOU ASSUME ALL RISK FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM OBTAINING ANY CONTENT FROM SERVICES AND/OR Videofusion WEBSITE, INCLUDING ANY DAMAGES RESULTING FROM COMPUTER VIRUSES.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">11. Limitation Of Liability</h2>
+          <p className="uppercase">TO THE FULL EXTENT PERMITTED BY LAW, Videofusion IS NOT LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF BUSINESS, REVENUE, PROFITS, GOODWILL, USE, DATA, ELECTRONICALLY TRANSMITTED ORDERS, OR OTHER ECONOMIC ADVANTAGE) ARISING OUT OF OR IN CONNECTION WITH SERVICES AND/OR Videofusion WEBSITE, EVEN IF Videofusion HAS PREVIOUSLY BEEN ADVISED OF, OR REASONABLY COULD HAVE FORESEEN, THE POSSIBILITY OF SUCH DAMAGES, HOWEVER, THEY ARISE, WHETHER IN BREACH OF CONTRACT OR IN TORT (INCLUDING NEGLIGENCE), INCLUDING WITHOUT LIMITATION DAMAGES DUE TO:</p>
+          <ol className="list-alpha uppercase">
+            <li>THE USE OF OR THE INABILITY TO USE THE SERVICES AND/OR Videofusion WEBSITE SERVICES;</li>
+            <li>THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND SERVICES RESULTING FROM ANY GOODS, DATA, INFORMATION OR SERVICES PURCHASED OR OBTAINED, OR MESSAGES RECEIVED OR TRANSACTIONS ENTERED INTO, THROUGH OR FROM THE SERVICES AND/OR Videofusion WEBSITE SERVICES;</li>
+            <li>STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON SERVICES AND/OR Videofusion WEBSITE, INCLUDING WITHOUT LIMITATION UNAUTHORIZED ACCESS TO OR ALTERATION OF TRANSMISSIONS OR DATA, MALICIOUS OR CRIMINAL BEHAVIOR, OR FALSE OR FRAUDULENT TRANSACTIONS; OR</li>
+            <li>CONTENT OR INFORMATION YOU MAY DOWNLOAD, USE, MODIFY OR DISTRIBUTE. IN NO EVENT SHALL Videofusion'S TOTAL LIABILITY FOR DAMAGES ARISING OUT OF THIS AGREEMENT EXCEED THE FEES PAID BY THE CUSTOMER FOR THE CONTENT AND THE SERVICES WITHIN THE IMMEDIATELY PRECEDING THREE (03) MONTHS.</li>
+          </ol>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">12. Indemnification</h2>
+          <p>You are solely responsible for your conduct and your data related to the Services. You shall defend, indemnify, and hold harmless us, our affiliates and each of our and their respective employees, contractors, directors, suppliers and representatives from all liabilities, claims, and expenses, including reasonable attorneys' fees, that arise from or relate to your use or misuse of, or access to, the Services, Content, or otherwise from your User Content, violation of this Agreement, or infringement by you, or any third party using your Account or identity in the Services, of any intellectual property or other rights of any person or entity. We reserve the right to assume the exclusive defence and control of any matter otherwise subject to indemnification by you, in which event you will assist and cooperate with us in asserting any available defences.</p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">13. Miscellaneous</h2>
+          <ol className="list-alpha">
+            <li className="mb-4">
+              <strong>Entire Agreement and Severability.</strong> This Agreement is the entire agreement between you and us with respect to the Services, including use of the Site, and supersedes all prior or contemporaneous communications and proposals (whether oral, written, or electronic) between you and us with respect to the Services. If any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this Agreement will otherwise remain in full force and effect and enforceable. The failure of Videofusion to exercise in any respect any right provided for herein shall not be deemed a waiver of any further rights hereunder.
+            </li>
+            <li className="mb-4">
+              <strong>Force Majeure.</strong> We shall not be liable for any failure to perform our obligations hereunder where such failure results from any cause beyond our reasonable control, including, without limitation, pandemic, epidemic, mechanical, electronic or communications failure or degradation.
+            </li>
+            <li className="mb-4">
+              <strong>Assignment.</strong> This Agreement is personal to you, and is not assignable, transferable or sublicensable by you except with our prior written consent. We may assign, transfer or delegate any of our rights and obligations hereunder without consent.
+            </li>
+          </ol>
+        </div>
       </div>
     </LegalPageLayout>
   );
