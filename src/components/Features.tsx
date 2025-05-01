@@ -13,34 +13,28 @@ import { cn } from "@/lib/utils";
 export const Features = () => {
   const features = [
     {
-      icon: <PhosphorIcons.Article weight="duotone" className="w-8 h-8" />,
-      title: "Convert More on Product Pages",
-      description: "Turn browsers into buyers with **persuasive testimonials**. Our AI automatically surfaces your most compelling customer stories at the perfect moment."
+      title: "Minute made 4 - solution (PDP)",
+      video: "/videos/Minute made 4.mp4"
     },
     {
-      icon: <PhosphorIcons.ShareNetwork weight="duotone" className="w-8 h-8" />,
-      title: "Dominate Social Media",
-      description: "Stand out in crowded feeds with **thumb-stopping content**. Create attention-grabbing moments that capture viewers and drive meaningful engagement."
+      title: "Minute made 1 - hook (Paid ads, social media)",
+      video: "/videos/Minute made 1.mp4"
     },
     {
-      icon: <PhosphorIcons.EnvelopeSimple weight="duotone" className="w-8 h-8" />,
-      title: "Supercharge Your Email ROI",
-      description: "Transform campaigns with **dynamic video previews**. Instantly grab attention and drive action with your most compelling moments."
+      title: "Groove life - solution (PDP, blogs)",
+      video: "/videos/groove life.mp4"
     },
     {
-      icon: <PhosphorIcons.ShoppingBag weight="duotone" className="w-8 h-8" />,
-      title: "Maximize Social Shopping",
-      description: "Turn scrollers into buyers with **persuasive product moments**. Showcase your best social proof exactly when it matters most."
+      title: "Iconic - social proof (Social shopping - Meta, tik tok shops)",
+      video: "/videos/Iconic.mp4"
     },
     {
-      icon: <PhosphorIcons.Globe weight="duotone" className="w-8 h-8" />,
-      title: "Elevate Your Website",
-      description: "Keep visitors engaged with **perfectly-timed social proof**. Transform your website into an immersive experience that builds trust."
+      title: "Pedigree - Hook (Emails, Newsletters)",
+      video: "/videos/Pedigree.mp4"
     },
     {
-      icon: <PhosphorIcons.BookOpen weight="duotone" className="w-8 h-8" />,
-      title: "Revolutionize Blog Content",
-      description: "Make content captivating with **strategic video highlights**. Keep readers engaged and guide them toward conversion."
+      title: "Body shop - Social proof (Social media, PDPs)",
+      video: "/videos/Bodyshop.mp4"
     }
   ];
 
@@ -110,23 +104,25 @@ export const Features = () => {
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                     className={cn(
-                      "bg-white/80 backdrop-blur-sm rounded-3xl p-8 transition-all duration-500 border border-gray-100/20",
+                      "bg-white/80 backdrop-blur-sm rounded-3xl p-4 transition-all duration-500 border border-gray-100/20",
                       current === index 
                         ? "opacity-100 scale-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-purple-500/20" 
                         : "opacity-40 scale-95 blur-[2px]"
                     )}
                   >
-                    <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                      <div className="text-purple-600">
-                        {feature.icon}
-                      </div>
+                    <div className="relative w-full aspect-[9/16] rounded-xl overflow-hidden">
+                      <video 
+                        src={feature.video}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
                     </div>
-                    <h3 className="text-2xl font-[450] text-gray-900 mb-3 tracking-[-0.02em] leading-tight">
+                    <h3 className="text-lg font-[450] text-gray-900 mt-4 tracking-[-0.02em] leading-tight text-center">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 font-[350] leading-relaxed text-[15px]">
-                      {renderDescription(feature.description)}
-                    </p>
                   </div>
                 </CarouselItem>
               ))}
