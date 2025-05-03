@@ -13,27 +13,27 @@ import { cn } from "@/lib/utils";
 export const Features = () => {
   const features = [
     {
-      title: "Minute made 4 - solution (PDP)",
+      title: "Minute Made - PDPs redesigned to drive conversions",
       video: "/videos/Minute made 4.mp4"
     },
     {
-      title: "Minute made 1 - hook (Paid ads, social media)",
-      video: "/videos/Minute made 1.mp4"
-    },
-    {
-      title: "Groove life - solution (PDP, blogs)",
+      title: "Groove life - Blogs + PDPs turned intent into action",
       video: "/videos/groove life.mp4"
     },
     {
-      title: "Iconic - social proof (Social shopping - Meta, tik tok shops)",
+      title: "Iconic - Social proof via TikTok & Meta shops",
       video: "/videos/Iconic.mp4"
     },
     {
-      title: "Pedigree - Hook (Emails, Newsletters)",
+      title: "Pedigree - Emotional email hooks that clicked across emails/newsletters",
       video: "/videos/Pedigree.mp4"
     },
     {
-      title: "Body shop - Social proof (Social media, PDPs)",
+      title: "Minute Made - Hooks that stopped thumbs mid-scroll",
+      video: "/videos/Minute made 1.mp4"
+    },
+    {
+      title: "The Body Shop - UGC layered on PDPs for instant trust.",
       video: "/videos/Bodyshop.mp4"
     }
   ];
@@ -65,15 +65,9 @@ export const Features = () => {
     return () => clearInterval(autoRotateInterval);
   }, [api, isPaused]);
 
-  const renderDescription = (description: string) => {
-    // Split the description by bold markers and map to spans
-    return description.split('**').map((part, index) => {
-      if (index % 2 === 1) {
-        // Odd indices are the bold parts
-        return <span key={index} className="font-semibold">{part}</span>;
-      }
-      return part;
-    });
+  const splitTitle = (title: string) => {
+    const [brand, description] = title.split(" - ");
+    return { brand, description };
   };
 
   return (
@@ -98,34 +92,40 @@ export const Features = () => {
             }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {features.map((feature, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                    className={cn(
-                      "bg-white/80 backdrop-blur-sm rounded-3xl p-4 transition-all duration-500 border border-gray-100/20",
-                      current === index 
-                        ? "opacity-100 scale-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-purple-500/20" 
-                        : "opacity-40 scale-95 blur-[2px]"
-                    )}
-                  >
-                    <div className="relative w-full aspect-[9/16] rounded-xl overflow-hidden">
-                      <video 
-                        src={feature.video}
-                        className="w-full h-full object-cover"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                      />
+              {features.map((feature, index) => {
+                const { brand, description } = splitTitle(feature.title);
+                return (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div
+                      onMouseEnter={() => setIsPaused(true)}
+                      onMouseLeave={() => setIsPaused(false)}
+                      className={cn(
+                        "bg-white/80 backdrop-blur-sm rounded-3xl p-4 transition-all duration-500 border border-gray-100/20",
+                        current === index 
+                          ? "opacity-100 scale-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-purple-500/20" 
+                          : "opacity-40 scale-95 blur-[2px]"
+                      )}
+                    >
+                      <h3 className="text-xl font-[450] text-gray-900 mb-3 tracking-[-0.02em] leading-tight text-center">
+                        {brand}
+                      </h3>
+                      <div className="relative w-full aspect-[9/16] rounded-xl overflow-hidden">
+                        <video 
+                          src={feature.video}
+                          className="w-full h-full object-cover"
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        />
+                      </div>
+                      <p className="text-base font-[350] text-gray-600 mt-3 text-center">
+                        {description}
+                      </p>
                     </div>
-                    <h3 className="text-lg font-[450] text-gray-900 mt-4 tracking-[-0.02em] leading-tight text-center">
-                      {feature.title}
-                    </h3>
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                );
+              })}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
